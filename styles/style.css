@@ -16,6 +16,9 @@ body {
     display: flex;
     flex-direction: row;
     height: 100vh;
+
+    font-family: sans-serif;
+    font-size: 12px;
 }
 
 
@@ -83,7 +86,8 @@ body {
 
 .section-top-message,
 .section-middle-form,
-.section-lower-buttons {
+.section-lower-buttons,
+.footer {
     box-shadow: 0 3px 3px -2px crimson;
 }
 
@@ -94,7 +98,6 @@ body {
 }
 
 .section-top-message p {
-    font-family: sans-serif;
     font-size: large;
     font-weight: bold;
 }
@@ -109,7 +112,6 @@ body {
 
 .section-middle-form h2 {
     appearance: none;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
 }
 
@@ -135,18 +137,15 @@ body {
 .form-field label {
     margin-bottom: 5px;
 
-    font-family: sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 9px;
 }
 
-.form-field input
-{
-    font-size: 12px;
-    font-family: sans-serif;
+.form-field input {
     padding-left: 2px;
+    position: relative;
 }
 
 .form-field input:focus {
@@ -155,21 +154,42 @@ body {
     border-radius: 2px;
 }
 
+.form-field input::placeholder {
+    opacity: 0.6;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.form-field:has(input:required) label::after {
+    content: "*";
+    font-size: 14px;
+    color: red;
+
+    top: 3px;
+    padding: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.form-field span {
+    font-size: 10px;
+    color: red;
+    display: none;
+}
 
 /* Section 3rd =============================================== */
 
 .section-lower-buttons {
     flex: 1;
 
-    font-size: 12px;
-    font-family: sans-serif;
     padding: var(--sectional-padding);
     background-color: var(--section-bg-color);
 }
 
 .section-lower-buttons button[form='signup-form'] {
     padding: 10px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     display: inline-block;
     color: white;
@@ -181,15 +201,27 @@ body {
     background-color: var(--sectional-btn-color);
 }
 
-.section-lower-buttons p a{
+.section-lower-buttons p a {
     text-decoration: none;
     font-weight: 600;
     color: var(--sectional-btn-color);
 
 }
 
-.section-lower-buttons p a:visited
-{
+.section-lower-buttons p a:visited {
+    text-decoration: none;
+    color: var(--sectional-btn-color);
+}
+
+/* Footer =============================================== */
+
+.footer {
+    padding: 10px;
+    background-color: var(--section-bg-color);
+}
+
+.footer p a {
+    font-weight: bolder;
     text-decoration: none;
     color: var(--sectional-btn-color);
 }

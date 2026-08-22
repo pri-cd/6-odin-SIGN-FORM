@@ -21,47 +21,58 @@
 
     <div id="main" class="main">
         <section id="section-top-message" class="section-top-message">
-            <p>Step off the platform into a world where ancient tradition meets neon-lit modernity. From misty mountain
-                shrines to the electric pulse of Shibuya, Japan is a country of breathtaking contrasts — and this is
-                your invitation to experience it all, guided by people who know its hidden corners best.</p>
+            <p>Step off the platform into a world where ancient tradition meets neon-lit modernity. From misty
+                mountain shrines to the electric pulse of Shibuya, Japan is a country of breathtaking contrasts — and
+                this is your invitation to experience it all, guided by people who know its hidden corners best.</p>
         </section>
 
         <section id="section-middle-form" class="section-middle-form">
             <h2>Let's do this</h2>
+            <p>The Fields marked with * are required.</p>
             <form action="#" id="signup-form">
                 <div class="form-row">
                     <div class="form-field">
                         <label for="fname">First Name</label>
-                        <input type="text" name="fname" id="fname">
+                        <input type="text" name="fname" id="fname" required placeholder="Your First Name" minlength="2"
+                            maxlength="20" pattern="[A-Za-zÀ-ÖØ-öø-ÿ '\-]+">
+                        <span>Lorem ipsum dolor sit amet.</span>
                     </div>
 
                     <div class="form-field">
                         <label for="lname">Last Name</label>
-                        <input type="text" name="lname" id="lname">
+                        <input type="text" name="lname" id="lname" required placeholder="Your Last Name"
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ '\-]+">
+                        <span>Lorem ipsum dolor sit amet.</span>
+
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-field">
                         <label for="email">email</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required placeholder="Your Primary Mail">
+                        <span>Lorem ipsum dolor sit amet.</span>
                     </div>
 
                     <div class="form-field">
                         <label for="phoneNumber">Phone Number</label>
-                        <input type="tel" name="phoneNumber" id="phoneNumber">
+                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="In format, +XX 1234567890">
+                        <span>Lorem ipsum dolor sit amet.</span>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-field">
                         <label for="passwd">Password</label>
-                        <input type="password" name="passwd" id="passwd">
+                        <input type="password" name="passwd" id="passwd" required placeholder="Enter Password">
+                        <span>Lorem ipsum dolor sit amet.</span>
                     </div>
 
                     <div class="form-field">
                         <label for="passwdCF">Confirm Password</label>
-                        <input type="password" name="passwdCF" id="passwdCF">
+                        <input type="password" name="passwdCF" id="passwdCF" required
+                            placeholder="Enter Password Again">
+                        <span>Lorem ipsum dolor sit amet.</span>
                     </div>
                 </div>
 
@@ -69,12 +80,18 @@
         </section>
 
         <section id="section-lower-buttons" class="section-lower-buttons">
-            <button type="submit" form="signup-form">Create Account</button>
+            <button id="submit-form" type="submit" form="signup-form">Create Account</button>
             <p>Already have an account? <a href="#">Log In</a></p>
         </section>
+
+        <footer class="footer" id="footer">
+            <p>Japan icons picked created by <a href="https://www.flaticon.com/free-icons/japan">Good Ware -
+                    Flaticon</a></p>
+            <p>Train image created by <a
+                    href="https://unsplash.com/@frogman1962?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tsukada
+                    Kazuhiro - Unsplash</a></p>
+        </footer>
     </div>
-    <!-- <a href="https://www.flaticon.com/free-icons/japan" title="japan icons">Japan icons created by Good Ware - Flaticon</a> -->
-    <!-- Photo by <a href="https://unsplash.com/@frogman1962?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tsukada Kazuhiro</a> on <a href="https://unsplash.com/photos/a-train-on-the-railway-tracks-J--maaXZwLI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
 </body>
 
 </html>
