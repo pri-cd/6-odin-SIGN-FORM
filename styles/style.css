@@ -75,6 +75,7 @@ body {
     --sectional-padding: 30px;
     --input-focus-border-color: #86a7e8;
     --sectional-btn-color: #596D48;
+    --sectional-btn-hover: #6c805a;
 
     display: flex;
     flex-direction: column;
@@ -199,6 +200,18 @@ body {
     border: none;
     border-radius: 5px;
     background-color: var(--sectional-btn-color);
+}
+
+.section-lower-buttons button[form='signup-form']:hover {
+    transform: scale(1.01);
+    background-color: var(--sectional-btn-hover);
+    cursor: pointer;
+}
+
+.section-lower-buttons button[form='signup-form']:active {
+    transform: scale(0.99);
+    background-color: var(--sectional-btn-hover);
+    cursor: pointer;
 }
 
 .section-lower-buttons p a {

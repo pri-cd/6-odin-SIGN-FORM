@@ -29,7 +29,7 @@
         <section id="section-middle-form" class="section-middle-form">
             <h2>Let's do this</h2>
             <p>The Fields marked with * are required.</p>
-            <form action="#" id="signup-form">
+            <form action="#" id="signup-form" novalidate>
                 <div class="form-row">
                     <div class="form-field">
                         <label for="fname">First Name</label>
@@ -40,8 +40,8 @@
 
                     <div class="form-field">
                         <label for="lname">Last Name</label>
-                        <input type="text" name="lname" id="lname" required placeholder="Your Last Name"
-                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ '\-]+">
+                        <input type="text" name="lname" id="lname" required placeholder="Your Last Name" minlength="2"
+                            maxlength="20" pattern="[A-Za-zÀ-ÖØ-öø-ÿ '\-]+">
                         <span>Lorem ipsum dolor sit amet.</span>
 
                     </div>
@@ -56,7 +56,8 @@
 
                     <div class="form-field">
                         <label for="phoneNumber">Phone Number</label>
-                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="In format, +XX 1234567890">
+                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="In format, 1234567890"
+                            maxlength="10" minlength="10" pattern="[0-9]{10}">
                         <span>Lorem ipsum dolor sit amet.</span>
                     </div>
                 </div>
@@ -64,14 +65,15 @@
                 <div class="form-row">
                     <div class="form-field">
                         <label for="passwd">Password</label>
-                        <input type="password" name="passwd" id="passwd" required placeholder="Enter Password">
+                        <input type="password" name="passwd" id="passwd" required placeholder="Enter Password"
+                            minlength="5" maxlength="15">
                         <span>Lorem ipsum dolor sit amet.</span>
                     </div>
 
                     <div class="form-field">
                         <label for="passwdCF">Confirm Password</label>
-                        <input type="password" name="passwdCF" id="passwdCF" required
-                            placeholder="Enter Password Again">
+                        <input type="password" name="passwdCF" id="passwdCF" required placeholder="Enter Password Again"
+                            minlength="5" maxlength="15">
                         <span>Lorem ipsum dolor sit amet.</span>
                     </div>
                 </div>
